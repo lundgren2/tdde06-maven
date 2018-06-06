@@ -1,0 +1,50 @@
+# Tutorials
+https://www.youtube.com/watch?v=0CFWeVgzsqY
+
+
+## Install Maven and dependencies
+```sh
+brew install maven
+# java sdk
+brew install gradle
+```
+
+
+## Setup project
+### pom-root
+https://mvnrepository.com/artifact/org.codehaus.mojo.archetypes/pom-root
+```sh
+mvn archetype:generate -B -DgroupId=com.toblu933 -DartifactId=tdde06-maven -DarchetypeGroupId=org.codehaus.mojo.archetypes  -DarchetypeArtifactId=pom-root -DinteractiveMode=false
+```
+
+### client
+```sh
+mvn archetype:generate -B -DgroupId=com.toblu933 -DartifactId=java-client -DarchetypeGroupId=org.apache.maven.archetypes
+
+# create maven resources folder
+mkdir -p java-client/main/resources
+```
+
+### server
+https://github.com/raydac/mvn-golang
+```sh
+mvn archetype:generate -B -DarchetypeGroupId=com.igormaznitsa -DarchetypeArtifactId=mvn-golang-hello -DarchetypeVersion=2.2.0 -DgroupId=com.toblu933 -DartifactId=go-server -Dversion=1.0-SNAPSHOT
+
+# inside ./go-server/main/src/
+# remove App.java and AppTest.java and clone the ci-sample-project from git
+rm App.java AppTest.java
+git clone git@gitlab.ida.liu.se:large-scale-dev/ci-sample-project.git .
+rm -rf .git # remove git
+```
+
+### Higher grade
+add log4j.properties to `java-client/src/main/resources
+
+## Maven commands
+mvn verify
+mvn compile
+
+
+```
+# Plugins
+https://github.com/raydac/mvn-golang
