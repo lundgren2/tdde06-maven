@@ -40,6 +40,16 @@ rm -rf .git # remove git
 ### Higher grade
 add log4j.properties to `java-client/src/main/resources
 
+add log4j to java dependencies
+```xml
+<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+```
+
 ## Maven commands
 mvn verify
 mvn compile

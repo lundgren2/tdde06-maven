@@ -13,6 +13,8 @@ import org.apache.http.client.ClientProtocolException;
 public class HelloMaven {
 
     public static void main(String[] args) {
+        System.out.println("exit...");
+        System.exit(0);
         try {
             DefaultHttpClient httpClient = new DefaultHttpClient();
             HttpGet getRequest = new HttpGet( "http://localhost:8080/list");
