@@ -7,7 +7,7 @@
   <packaging>pom</packaging>
   <name>tdde06-maven</name>
   <modules>
-    <module>java-client</module>
     <module>go-server</module>
+    <module>java-client</module>
   </modules>
 </project>
