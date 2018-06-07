@@ -7,6 +7,7 @@ https://www.youtube.com/watch?v=0CFWeVgzsqY
 brew install maven
 # java sdk
 brew install gradle
+brew install postgresql
 ```
 
 
@@ -29,12 +30,13 @@ mkdir -p java-client/main/resources
 https://github.com/raydac/mvn-golang
 ```sh
 mvn archetype:generate -B -DarchetypeGroupId=com.igormaznitsa -DarchetypeArtifactId=mvn-golang-hello -DarchetypeVersion=2.2.0 -DgroupId=com.toblu933 -DartifactId=go-server -Dversion=1.0-SNAPSHOT
-
 # inside ./go-server/main/src/
 # remove App.java and AppTest.java and clone the ci-sample-project from git
 rm App.java AppTest.java
 git clone git@gitlab.ida.liu.se:large-scale-dev/ci-sample-project.git .
 rm -rf .git # remove git
+# add database schema
+psql -f schema.sql postgres
 ```
 
 ### Higher grade
