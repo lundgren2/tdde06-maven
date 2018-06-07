@@ -14,7 +14,7 @@ import (
 
 const (
 	databaseUser = "postgres"
-	databaseHost = "db"
+	databaseHost = "localhost"
 	databaseName = "postgres"
 )
 
