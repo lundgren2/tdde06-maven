@@ -36,7 +36,13 @@ rm App.java AppTest.java
 git clone git@gitlab.ida.liu.se:large-scale-dev/ci-sample-project.git .
 rm -rf .git # remove git
 # add database schema
+
+initdb /usr/local/var/postgres
 psql -f schema.sql postgres
+pg_ctl -D /usr/local/var/postgres -l logfile start
+psql postgres
+CREATE USER postgres WITH PASSWORD 'postgress3cre7'
+CREATE DATABASE postgres
 ```
 
 ### Higher grade

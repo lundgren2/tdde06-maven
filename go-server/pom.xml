@@ -71,6 +71,15 @@
         <extensions>true</extensions>
         <configuration></configuration>
         <executions>
+          <execution>
+            <id>default-get</id>
+            <configuration>
+                <packages>
+                    <package>github.com/lib/pq</package>
+                </packages>
+                <branch>master</branch>
+            </configuration>
+        </execution>
         <execution>
             <id>default-test</id>
             <configuration>

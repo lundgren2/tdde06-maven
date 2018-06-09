@@ -1,6 +1,0 @@
-2018-06-07 02:29:23.459 CEST [21304] LOG:  could not bind IPv6 address "::1": Address already in use
-2018-06-07 02:29:23.459 CEST [21304] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
-2018-06-07 02:29:23.459 CEST [21304] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2018-06-07 02:29:23.460 CEST [21304] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
-2018-06-07 02:29:23.470 CEST [21305] LOG:  database system was shut down at 2018-06-07 02:29:13 CEST
-2018-06-07 02:29:23.473 CEST [21304] LOG:  database system is ready to accept connections
