@@ -78,7 +78,7 @@ func TestTask(test *testing.T) {
 	res, err = http.Post(testServer.URL+"/task", "application/json", bytes.NewReader(b))
 	checkFail(test, err)
 	if res.StatusCode != 200 {
-		test.Errorf("Expected 200, got %d")
+		test.Errorf("Expected 200, got %d", res.StatusCode)
 	}
 
 	// Test the if the task got stored in the list
@@ -120,7 +120,7 @@ func TestList(test *testing.T) {
 	checkFail(test, err)
 
 	if len(lists) != 0 {
-		test.Errorf("Expected [] got %s", lists)
+		test.Errorf("Expected [] got  other”)
 	}
 
 	// Test creation of a list
@@ -146,6 +146,6 @@ func TestList(test *testing.T) {
 	err = json.Unmarshal(body, &lists)
 	checkFail(test, err)
 	if len(lists) != 1 {
-		test.Errorf("Expected [] got %s", lists)
+		test.Errorf("Expected [] got  other”)
 	}
 }
