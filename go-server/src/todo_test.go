@@ -120,7 +120,7 @@ func TestList(test *testing.T) {
 	checkFail(test, err)
 
 	if len(lists) != 0 {
-		test.Errorf("Expected [] got  other”)
+		test.Errorf("Expected [] got  other")
 	}
 
 	// Test creation of a list
@@ -146,6 +146,6 @@ func TestList(test *testing.T) {
 	err = json.Unmarshal(body, &lists)
 	checkFail(test, err)
 	if len(lists) != 1 {
-		test.Errorf("Expected [] got  other”)
+		test.Errorf("Expected [] got  other")
 	}
 }
