@@ -46,4 +46,26 @@
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
+    <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
+   <profiles>
+    <profile>
+      <id>development</id>
+      <properties>
+        <log.file>logs/dev.log</log.file>
+      </properties>
+    </profile>
+    <profile>
+      <id>test</id>
+      <properties>
+        <log.file>logs/test.log</log.file>
+      </properties>
+    </profile>
+  </profiles>
 </project>
