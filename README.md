@@ -54,6 +54,29 @@ ALTER DATABASE postgres OWNER TO postgres;
 
 ### Plugin
 
+Generate plugin and add this to the POM
+
+```xml
+ <plugin>
+        <groupId>sample.plugin</groupId>
+        <artifactId>hello-maven-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <configuration>
+          <filename>touched.txt</filename>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>touch</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+```
+
+then add this in plugin java file to access parameters: `@Parameter( defaultValue = "default.txt", property = "touch.filename" )`
+
 ```sh
 mvn archetype:generate \
 -DgroupId=sample.plugin \
