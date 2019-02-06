@@ -52,6 +52,16 @@ CREATE DATABASE postgres;
 ALTER DATABASE postgres OWNER TO postgres;
 ```
 
+### Plugin
+
+```sh
+mvn archetype:generate \
+-DgroupId=sample.plugin \
+ -DartifactId=hello-maven-plugin \
+ -DarchetypeGroupId=org.apache.maven.archetypes \
+ -DarchetypeArtifactId=maven-archetype-plugin
+```
+
 ### Higher grade
 
 add log4j.properties to `java-client/src/main/resources
